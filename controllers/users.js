@@ -8,6 +8,7 @@ const NotFound = require('../errors/NotFound');
 const BadRequest = require('../errors/BadRequest');
 const InternalServerError = require('../errors/InternalServerError');
 const EmailExist = require('../errors/EmailExist');
+const Unauthorized = require('../errors/Unauthorized');
 
 module.exports.createUser = (req, res, next) => {
   const {
@@ -79,8 +80,8 @@ module.exports.login = (req, res, next) => {
       });
       return res.send({ token });
     })
-    .catch((err) => {
-      next(err);
+    .catch(() => {
+      next(new Unauthorized('Неверные учетные данные'));
     });
 };
 
