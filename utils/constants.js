@@ -6,6 +6,7 @@ const allowedCors = [
   'https://movies-explorer.v92.nomoredomains.club',
   'http://movies-explorer.v92.nomoredomains.club',
   'localhost:3000',
+  'http://localhost:3000',
   'http://localhost:3010',
 ];
 
