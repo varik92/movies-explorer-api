@@ -33,7 +33,7 @@ module.exports.createMovie = (req, res, next) => {
     nameEN,
   })
     .then((movie) => {
-      res.send({ data: movie });
+      res.send(movie);
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {
