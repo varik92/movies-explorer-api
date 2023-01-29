@@ -57,6 +57,8 @@ module.exports.updateUser = (req, res, next) => {
       next(new BadRequest('Переданы некорректные данные при обновлении профиля'));
     } else if (err.name === 'CastError') {
       next(new BadRequest('Переданы некорректные данные при обновлении профиля'));
+    } else if (err.code === 11000) {
+      next(new EmailExist('Пользователь с таким Email уже существует'));
     } else {
       next(new InternalServerError('Произошла ошибка'));
     }
