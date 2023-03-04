@@ -80,7 +80,6 @@ module.exports.login = (req, res, next) => {
         httpOnly: true,
         sameSite: 'None',
         secure: true,
-        cookie: { domain: '.vercel.app' },
       });
       return res.send({ token });
     })
