@@ -21,7 +21,7 @@ mongoose.connect(MONGODB_URL, {
 });
 
 app.use(requestLogger);
-app.use(rateLimiter);
+/* app.use(rateLimiter); */
 app.use(helmet());
 
 app.use(corsHandler);
