@@ -8,6 +8,7 @@ const allowedCors = [
   'localhost:3000',
   'http://localhost:3000',
   'http://localhost:3010',
+  'https://movies-explorer-frontend-varik92.vercel.app'
 ];
 
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
